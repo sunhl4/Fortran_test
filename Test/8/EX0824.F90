@@ -25,6 +25,7 @@ end
 
 real function Get_Distance(angele,speed)
 implicit none
+
     real, intent(in) :: angele, speed
     real, rad, Vx, time
     real, external :: Angel_To_Rad
