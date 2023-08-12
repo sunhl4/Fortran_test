@@ -1,9 +1,9 @@
 program ex0825
 implicit none
     interface
-    function random10(1bound,ubound)
+    function random10(lbound,ubound)
     implicit none
-        real :: 1bound, ubound
+        real :: lbound, ubound
         real :: random10(10)
         end function
     end interface
@@ -15,17 +15,17 @@ implicit none
     stop
 end
 
-function random10(1bound,ubound)
+function random10(lbound,ubound)
 implicit none
-    real :: 1bound, ubound
+    real :: lbound, ubound
     real :: len
     real :: random10(10)
     real :: t 
     integer :: i 
-    len = ubound -  1bound
+    len = ubound -  lbound
     do i=1, 10
         call random_number(t)
-        random10(i) = 1bound + len * t 
+        random10(i) = lbound + len * t 
     end do
     return
 end
