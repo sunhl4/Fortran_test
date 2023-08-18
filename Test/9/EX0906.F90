@@ -19,8 +19,7 @@ program ex0906
     if (i/=0) then
         write (*,*)"Allocate buffer fail."
         stop
-    end if 
-    
+    end if  
     open (fileid, file = filename)
     do i = 1, students
         write(*,"('请输入'I2'号同学的中文、英文及数学成绩')") i
