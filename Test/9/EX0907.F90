@@ -15,20 +15,19 @@ implicit none
 
     inquire(file = filename, exist = alive)
     if (.not. alive)then
-        write(unit=*, fmt=*) trim(filename). " doesn't exist."
+        write(unit=*, fmt=*) trim(filename), " doesn't exist."
         stop
     end if 
 
     open (fileid, file=filename)
     do while (.true.)
-        read(fileid, "(5XI2,/,5xi3,6xi3,6xi3)",  iostat = error)no, stat
-        if (error/=0)exist
-        write(unit=*, "('请输入'I2'号同学的中文， 英文及数学成绩')")i
-        read(*,*)s(i)%Chinese, s(i) %English, s(i)%Math
+        read(fileid, "(5XI2,/,5xi3,6xi3,6xi3)", iostat = error)no, s
+        if (error/=0)exit
+        write(*, "(I2'号 中文:'I2'英文:'I3'数学:'i3)")no, s
         end do 
-        close
+        close (fileid)
         stop
     end
-     
+
         
         
