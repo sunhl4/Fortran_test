@@ -18,7 +18,7 @@ function getmin(p)
     implicit none
     integer, pointer :: p(:)
     integer, pointer :: getmin
-    integer :: i, a
+    integer :: i, s
     integer :: min
 
     s = size(p,1) !查询数组的大小
