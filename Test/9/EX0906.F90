@@ -27,6 +27,7 @@ program ex0906
         read (*,*) s(i)%Chinese, s(i)%English, s(i)%Math
         write (fileid, "('座号:'I2/'中文'I3'英文:'I3'数学:'I3)")i, s(i)
     end do
+    
     close(fileid)
     stop
 end
