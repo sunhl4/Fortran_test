@@ -1,5 +1,4 @@
 program ex0903
-
 implicit none
     character(len=20) :: filename = "ex0903.f90"
     logical alive
