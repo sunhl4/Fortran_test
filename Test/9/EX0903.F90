@@ -5,7 +5,6 @@ implicit none
     inquire(file = filename, exist = alive) 
     ! inquire 查询filename字符串内包含的文件名是否存在
     ! 如果存在则alive的值为.TURE.
-
     if (alive) then
         write(*,*) filename, " exist."
     else
